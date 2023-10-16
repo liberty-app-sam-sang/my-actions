@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: ${{ inputs.deploy-env }}
+    env:
+      DEFAULT_ENVIRONMENT: ${{ vars.DEFAULT_ENVIRONMENT }}
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 17
